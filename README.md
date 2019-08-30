@@ -1,5 +1,5 @@
 # Curso Udemy
-Apuntes del curso de "Udemy Angular: De cero a experto creando aplicaciones (Angular 8+)" 
+Apuntes del curso de "Udemy JavaScript: De cero a los detalles" 
 
 # Links
-https://www.udemy.com/angular-2-fernando-herrera/
+https://www.udemy.com/javascript-de-cero-hasta-los-detalles
