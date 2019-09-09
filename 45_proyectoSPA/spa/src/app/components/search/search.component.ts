@@ -12,6 +12,8 @@ export class SearchComponent implements OnInit {
 
   termino:string;
 
+  vacio:boolean;
+
   constructor(private activatedRoute:ActivatedRoute, 
               private heroesService:HeroesService) {   
   }
@@ -22,8 +24,13 @@ export class SearchComponent implements OnInit {
       this.heroes = this.heroesService.buscarHeroes(this.termino);
       console.log(this.heroes);
     });
-  }
 
+    if (this.heroes.length > 0) {
+      this.vacio = false;
+    } else {
+      this.vacio = true;
+    }
+  }
 
   verHeroe(id:number){    
     console.log('no implementado');

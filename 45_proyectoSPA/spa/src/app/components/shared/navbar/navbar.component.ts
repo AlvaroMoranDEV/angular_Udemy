@@ -7,16 +7,14 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  private router:Router;
-
-  constructor(router:Router) {
-    this.router = router;
+  constructor(private router:Router) {    
    }
 
   ngOnInit() {
   }
 
-  buscarHeroe(term:string) {     
+  buscarHeroe(term:string) { 
+    console.log('Buscando con clave: ' + term);        
     this.router.navigate( ['/search', term] );
   }
 }
