@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 
 export class AppComponent {
@@ -18,6 +17,10 @@ export class AppComponent {
   decimal:number = 0.35156;
 
   salario:number = 12.345;
+
+  youtube:string = "https://www.youtube.com/embed/qpT5Md4TPJg";
+
+  activar:boolean = false;
 
   heroe = {
     nombre: "Logan",
