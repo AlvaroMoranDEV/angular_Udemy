@@ -7,9 +7,13 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
-// Modulo y gestion de rutas
-import { RouterModule } from '@angular/router';
+// Peticiones HTTP
+import { HttpClientModule } from '@angular/common/http'
+
+// Rutas
+import {RouterModule} from '@angular/router';
 import { ROUTES } from './app.routes';
+import { SpotifyService } from './services/spotify.service';
 
 
 @NgModule({
@@ -22,9 +26,12 @@ import { ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES, {useHash:true})
+    HttpClientModule,
+    RouterModule.forRoot( ROUTES, {useHash: true})
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
