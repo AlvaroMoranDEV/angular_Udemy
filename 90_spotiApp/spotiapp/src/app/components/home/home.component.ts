@@ -10,15 +10,25 @@ export class HomeComponent implements OnInit {
 
   nuevasCanciones: any[] = [];
 
-  loading:boolean = false;
+  loading:boolean;
+
+  error:boolean;
+
+  errorCode:string;
 
   constructor(private service:SpotifyService) {
 
       this.loading = true;
+      this.error = false;
 
       this.service.getNewReleases().subscribe( (data) => {
         this.nuevasCanciones = data;
         this.loading = false;
+      }, (errorServicio) => {
+        this.error = true;
+        this.loading = false;
+        this.errorCode = errorServicio.error.error.message;
+        console.log(errorServicio);
       });
    }
 

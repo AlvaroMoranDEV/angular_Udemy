@@ -18,10 +18,12 @@ export class TarjetasComponent implements OnInit {
   verArtista(item:any) {
     
     let artistaId;
-
+    
     if (item.type ==='artist') {
+      // Recibimos un artista
       artistaId = item.id;
     } else {
+      // Recibimos un album
       artistaId = item.artists[0].id;
     }
     this.router.navigate(['/artist', artistaId]);
